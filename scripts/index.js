@@ -67,6 +67,7 @@ function consoleText(words, id, colors) {
 
 // parallax effect
 function parallax(event) {
+  if (window.innerWidth < 1024) return;
     this.querySelectorAll(".parallax-wrap span").forEach((shift) => {
         const position = shift.getAttribute("value");
         const x = (window.innerWidth - event.pageX * position) / 90;
